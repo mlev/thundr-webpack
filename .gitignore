@@ -1,6 +1,5 @@
 src/main/webapp/static
-src/main/webapp/WEB-INF/tags/generated-css.html
-src/main/webapp/WEB-INF/tags/generated-js.html
+src/main/webapp/WEB-INF/tags/layout.tag
 target/
 classes/
 bin/

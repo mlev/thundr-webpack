@@ -1,14 +1,8 @@
-namespace App {
-    "use strict";
+export class HomeController {
 
-    export class HomeController {
-
-        public static $inject = [];
-
-        constructor() {
-            //
-        }
-
+    /* @ngInject */
+    constructor(private $log: ng.ILogService) {
+        $log.debug("homeController updated");
     }
 
 }

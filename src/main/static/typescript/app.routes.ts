@@ -1,27 +1,24 @@
-namespace App {
-    "use strict";
+import {HomeController} from "./controller/homeController";
+import * as angular from "angular";
 
-    class Routes {
+class Routes {
 
-        public static $inject = ["$stateProvider", "$urlRouterProvider"];
+    constructor($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) {
 
-        constructor($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) {
+        $urlRouterProvider.otherwise("/");
+        $stateProvider
+            .state("home", {
+                controller: HomeController,
+                controllerAs: "ctrl",
+                templateUrl: "/static/templates/home.html",
+                url: "/"
+            })
 
-            $urlRouterProvider.otherwise("/");
-            $stateProvider
-                .state("home", {
-                    controller: HomeController,
-                    controllerAs: "ctrl",
-                    templateUrl: "/static/templates/home.html",
-                    url: "/"
-                })
+        ;
 
-            ;
-
-        }
     }
-
-    angular
-        .module("app")
-        .config(Routes);
 }
+
+angular
+    .module("app")
+    .config(Routes);
