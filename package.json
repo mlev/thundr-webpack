@@ -17,6 +17,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-webpack": "^1.8.0",
+    "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "ng-annotate-loader": "^0.2.0",
     "raw-loader": "^0.5.1",
@@ -36,10 +37,10 @@
   },
   "scripts": {
     "clean": "rm -rf ./src/main/webapp/static && rm -rf ./src/main/webapp/WEB-INF/tags/layout.tag",
-    "prebuild": "npm run clean && npm run typings",
+    "dev": "webpack-dev-server",
+    "prebuild": "npm install && npm run clean && npm run typings",
     "build": "webpack",
     "typings": "typings install",
-    "dev": "webpack-dev-server",
     "test": "karma start karma.conf.js --single-run"
   },
   "dependencies": {

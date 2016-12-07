@@ -16,7 +16,7 @@
 	</jsp:attribute>
 	
 	<jsp:body>
-		Hello
+		Layout tag content
 		<div ui-view>
 		</div>
 	</jsp:body>

@@ -101,7 +101,8 @@ module.exports = () => {
             }),
             new HtmlWebpackPlugin(injectAssetsIntoLayoutTag()),
             new HtmlWebpackHarddiskPlugin(),
-            new webpack.optimize.UglifyJsPlugin()
+            // Disable for now as slows down build a lot
+            // new webpack.optimize.UglifyJsPlugin()
         ]
     }
 };
