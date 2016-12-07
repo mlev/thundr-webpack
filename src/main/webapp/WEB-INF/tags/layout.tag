@@ -31,5 +31,5 @@
 	<div id="scripts">
 		${scripts}
 	</div>
-<script type="text/javascript" src="/static/bundle.js?afa3338d27d10d492f0a"></script></body>
+<script type="text/javascript" src="/static/bundle.js?30984a003d1488637111"></script></body>
 </html>

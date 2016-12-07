@@ -38,47 +38,50 @@
 
 	<build>
 		<plugins>
-			<!-- This plugin runs the grunt build at the appropriate lifecycle points of the maven build -->
+			<!-- This plugin runs the UI build at the appropriate lifecycle points of the maven build -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.2.1</version>
 				<executions>
-					<execution> <!-- grunt clean during mvn clean -->
+					<execution> <!-- clean during mvn clean -->
 						<id>clean</id>
 						<phase>clean</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>grunt</executable>
+							<executable>npm</executable>
 							<arguments>
+								<argument>run</argument>
 								<argument>clean</argument>
 							</arguments>
 						</configuration>
 					</execution>
-					<execution> <!-- grunt build during mvn generate-sources -->
+					<execution> <!-- build during mvn generate-sources -->
 						<id>build</id>
 						<goals>
 							<goal>exec</goal>
 						</goals>
 						<phase>generate-sources</phase>
 						<configuration>
-							<executable>grunt</executable>
+							<executable>npm</executable>
 							<arguments>
+								<argument>run</argument>
 								<argument>build</argument>
 							</arguments>
 						</configuration>
 					</execution>
-					<execution> <!-- grunt test during mvn test -->
+					<execution> <!-- test during mvn test -->
 						<id>test</id>
 						<goals>
 							<goal>exec</goal>
 						</goals>
 						<phase>test</phase>
 						<configuration>
-							<executable>grunt</executable>
+							<executable>npm</executable>
 							<arguments>
+								<argument>run</argument>
 								<argument>test</argument>
 							</arguments>
 						</configuration>

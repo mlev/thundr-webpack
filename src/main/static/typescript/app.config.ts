@@ -24,7 +24,8 @@ class TemplateCacheBuster {
         function templateFactoryDecorator($delegate) {
             let fromUrl = angular.bind($delegate, $delegate.fromUrl);
             $delegate.fromUrl = (url, params) => {
-                if (url !== null && angular.isDefined(url) && angular.isString(url)) {
+
+                if (angular.isString(url) && url.indexOf("uib/template/") === -1) {
                     url += (url.indexOf("?") === -1 ? "?" : "&");
                     url += "v=" + cacheBuster;
                 }
