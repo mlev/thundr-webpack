@@ -51,3 +51,10 @@ Deployment is still using Maven. e.g.
 ```
 mvn appengine:update -Pdev
 ```
+
+## Issues
+
+At the moment I've commented out the uglify task. Because we're pulling everything into a single bundle file it takes a long time to run.
+
+
+
