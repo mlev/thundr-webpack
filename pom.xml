@@ -8,12 +8,12 @@
 	<parent>
 		<groupId>com.threewks.thundr</groupId>
 		<artifactId>thundr-gae-app</artifactId>
-		<version>3</version>
+		<version>4</version>
 	</parent>
 
 	<properties>
-		<appId>${project.artifactId}-${project.activeProfiles[0].id}</appId>
-		<appVersion>${user.name}</appVersion>
+		<appId>thundr-webpack</appId>
+		<appVersion>1</appVersion>
 	</properties>
 
 	<!-- Profiles define the environments available. The active profile determines what environment you're deploying to when running appengine:update or similar -->

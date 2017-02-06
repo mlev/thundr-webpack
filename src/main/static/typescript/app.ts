@@ -6,10 +6,8 @@ import "angular-ui-router";
 
 angular
     .module("app", [
-        // "ngAnimate",
         "ui.bootstrap",
         "ui.router",
-        // "LocalStorageModule"
     ]);
 
 import "../less/styles/home.less";

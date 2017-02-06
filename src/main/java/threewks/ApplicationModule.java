@@ -6,6 +6,7 @@ import com.threewks.thundr.injection.BaseModule;
 import com.threewks.thundr.injection.UpdatableInjectionContext;
 import com.threewks.thundr.module.DependencyRegistry;
 import com.threewks.thundr.route.Router;
+import com.threewks.thundr.view.jsp.JspModule;
 import threewks.controller.Routes;
 
 public class ApplicationModule extends BaseModule {
@@ -13,6 +14,7 @@ public class ApplicationModule extends BaseModule {
 	public void requires(DependencyRegistry dependencyRegistry) {
 		super.requires(dependencyRegistry);
 		dependencyRegistry.addDependency(GaeModule.class);
+		dependencyRegistry.addDependency(JspModule.class);
 		dependencyRegistry.addDependency(ObjectifyModule.class);
 	}
 
