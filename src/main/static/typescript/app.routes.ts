@@ -1,11 +1,12 @@
 import {HomeController} from "./controller/homeController";
 import * as angular from "angular";
+import {StateProvider, UrlService} from "angular-ui-router";
 
 class Routes {
 
-    constructor($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) {
+    constructor($stateProvider: StateProvider, $urlServiceProvider: UrlService) {
 
-        $urlRouterProvider.otherwise("/");
+        $urlServiceProvider.rules.otherwise("/");
         $stateProvider
             .state("home", {
                 controller: HomeController,
