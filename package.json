@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "@types/angular-mocks": "^1.5.9",
+    "@types/jasmine": "^2.5.46",
+    "@types/karma-jasmine": "0.0.29",
     "clean-webpack-plugin": "^0.1.15",
     "copy-webpack-plugin": "^4.0.0",
     "css-loader": "^0.26.0",
@@ -26,7 +29,6 @@
     "tslint": "^3.15.1",
     "tslint-loader": "^2.1.5",
     "typescript": "^2.2.1",
-    "typings": "^1.5.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.2.0",
@@ -38,12 +40,16 @@
   "scripts": {
     "clean": "rm -rf ./src/main/webapp/static && rm -rf ./src/main/webapp/WEB-INF/tags/layout.tag",
     "dev": "webpack-dev-server",
-    "prebuild": "npm install && npm run clean && npm run typings",
+    "prebuild": "npm install && npm run clean",
     "build": "webpack",
-    "typings": "typings install",
     "test": "karma start karma.conf.js --single-run"
   },
   "dependencies": {
+    "@types/angular": "^1.6.10",
+    "@types/angular-local-storage": "^0.1.33",
+    "@types/angular-ui-bootstrap": "^0.13.41",
+    "@types/jquery": "^2.0.41",
+    "@types/lodash": "^4.14.58",
     "angular": "^1.5.8",
     "angular-mocks": "^1.5.9",
     "angular-ui-bootstrap": "^2.2.0",
